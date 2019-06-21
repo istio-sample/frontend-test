@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2019-06-21T09:24:33Z"
+  name: frontend
+  namespace: default
+  resourceVersion: "311050"
+  selfLink: /api/v1/namespaces/default/services/frontend
+  uid: 6135035a-9406-11e9-a322-5e9b77ead039
+spec:
+  clusterIP: 172.21.80.197
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: frontend
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

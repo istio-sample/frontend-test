@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>hello thymeleaf</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <meta name="google-signin-client_id"
+        content="908426345268-26d6f2v2p5pj95fq5tr2tdt896h8cd00.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script> -->
+</head>
+
+<body>
+    <h1>Hello Thymeleaf</h1>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <div/>
+    <a href="#" onclick="signOut();">Sign out</a>
+    <script>
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+                console.log('User signed out.');
+            });
+        }
+    </script>
+</body>
+
+</html>

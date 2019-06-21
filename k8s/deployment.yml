@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: frontend-deployment    
+spec:
+  replicas: 5
+  template:
+    metadata:
+      labels:
+        editor: vscode
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: au.icr.io/melon/frontend:2
