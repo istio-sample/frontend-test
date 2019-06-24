@@ -20,8 +20,18 @@
     <h1>Hello Thymeleaf</h1>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
+    
     <div class="g-sign-key"></div>
     <a href="#" onclick="signOut();">Sign out</a>
+    
+    
+    <dl>
+        <dt>echo</dt>
+        <dd th:text="${myData.echo}"></dd>
+        <dt>value</dt>
+        <dd th:text="${myData.value}"></dd>
+    </dl>
+    
     <script>
         function onSignIn(googleUser) {
             var profile = googleUser.getBasicProfile();
@@ -29,7 +39,7 @@
             console.log('Name: ' + profile.getName());
             console.log('Image URL: ' + profile.getImageUrl());
             console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-            console.log('id_token:' +gapi.auth2.getAuthInstance().currentUser.get().getAuthResponse().id_token);
+            console.log('id_token:' + gapi.auth2.getAuthInstance().currentUser.get().getAuthResponse().id_token);
         }
 
 

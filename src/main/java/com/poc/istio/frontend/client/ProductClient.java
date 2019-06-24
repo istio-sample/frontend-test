@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 /**
  * PostClient
  */
-@FeignClient(name = "user-api", url = "http://localhost:8080")
-public interface UserClient {
+@FeignClient(name = "product-api", url = "http://localhost:8080")
+public interface ProductClient {
     
-    @GetMapping("/users/{echo}")
-    String get(@PathVariable("echo") String echo);
+    @GetMapping("/products/{id}")
+    String get(@PathVariable("id") String id);
     
 }
